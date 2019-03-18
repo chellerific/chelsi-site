@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faGem from '@fortawesome/fontawesome-free-regular/faGem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCrown } from '@fortawesome/free-solid-svg-icons/faCrown';
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
       {/*<span className="icon fa-diamond"></span>*/}
-      <FontAwesomeIcon icon={faGem} transform="grow-18" />
+      <FontAwesomeIcon icon={faCrown} transform="grow-18" />
     </div>
     <div className="content">
       <div className="inner">
@@ -17,30 +17,37 @@ const Header = props => (
     <nav>
       <ul>
         <li>
+          <a href="https://github.com/chellerific">Github</a>
+        </li>
+        <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('intro');
+              props.onOpenArticle('experience');
             }}
           >
-            Intro
+            Experience
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('work');
+              props.onOpenArticle('projects');
             }}
           >
-            Work
+            Projects
           </a>
         </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('about');
+              props.onOpenArticle('experience');
             }}
           >
             About
@@ -50,7 +57,7 @@ const Header = props => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('contact');
+              props.onOpenArticle('experience');
             }}
           >
             Contact
