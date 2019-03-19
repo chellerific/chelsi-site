@@ -15,7 +15,7 @@ const Header = props => (
       </div>
     </div>
     <nav>
-      <ul>
+      <ul className="options">
         <li>
           <a href="https://github.com/chellerific">Github</a>
         </li>
@@ -41,30 +41,28 @@ const Header = props => (
         </li>
       </ul>
     </nav>
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('experience');
-            }}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('experience');
-            }}
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <ul className="info-options">
+      <li>
+        <a
+          href="javascript:;"
+          onClick={() => {
+            props.onOpenArticle('experience');
+          }}
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href="javascript:;"
+          onClick={() => {
+            props.onOpenArticle('contact');
+          }}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   </header>
 );
 

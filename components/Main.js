@@ -21,7 +21,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Experience</h2>
-
+          <p />
           {close}
         </article>
 
