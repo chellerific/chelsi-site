@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-regular-svg-icons/faBell';
-
+import Timeline from '../components/Timeline';
 class Main extends React.Component {
   render() {
     let close = (
@@ -21,7 +21,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Experience</h2>
-          <p />
+          <Timeline />
           {close}
         </article>
 
