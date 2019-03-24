@@ -1,13 +1,7 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCrown } from '@fortawesome/free-solid-svg-icons/faCrown';
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-    <div className="logo">
-      {/*<span className="icon fa-diamond"></span>*/}
-      <FontAwesomeIcon icon={faCrown} transform="grow-18" />
-    </div>
     <div className="content">
       <div className="inner">
         <h1>Chelsi Nolasco</h1>
@@ -46,7 +40,7 @@ const Header = props => (
         <a
           href="javascript:;"
           onClick={() => {
-            props.onOpenArticle('experience');
+            props.onOpenArticle('about');
           }}
         >
           About
