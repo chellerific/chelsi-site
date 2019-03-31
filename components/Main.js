@@ -21,7 +21,11 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Experience</h2>
-          <Timeline />
+          <Timeline>
+            <div label="Zemnya-0">Prologue</div>
+            <div label="Zemnya-1">Encounter</div>
+            <div label="Zemnya-2">Reunion</div>
+          </Timeline>
           {close}
         </article>
 
