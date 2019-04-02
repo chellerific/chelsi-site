@@ -2,59 +2,19 @@ import PropTypes from 'prop-types';
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
-    <div className="content">
-      <div className="inner">
-        <h1>Chelsi Nolasco</h1>
-        <p>Developer. Artist.</p>
-      </div>
-    </div>
-    <nav>
-      <ul className="options">
-        <li>
-          <a href="https://github.com/chellerific">Github</a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('experience');
-            }}
-          >
-            Experience
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('projects');
-            }}
-          >
-            Projects
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <ul className="info-options">
+    <ul>
       <li>
-        <a
-          href="javascript:;"
-          onClick={() => {
-            props.onOpenArticle('about');
-          }}
-        >
-          About
-        </a>
+        <div className="title">
+          <div className="inner">
+            <h1>My name's Chelsi.</h1>
+            <h2>Frontend developer and artist.</h2>
+          </div>
+        </div>
       </li>
       <li>
-        <a
-          href="javascript:;"
-          onClick={() => {
-            props.onOpenArticle('contact');
-          }}
-        >
-          Contact
-        </a>
+        <div className="content">
+          <h2>Interactive experiences and visual storytelling</h2>
+        </div>
       </li>
     </ul>
   </header>

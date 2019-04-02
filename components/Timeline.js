@@ -43,8 +43,8 @@ class Timeline extends React.Component {
     );
   }
 }
-Timeline.PropTypes = {
-  children: PropTypes.instanceOf(Array).isRequired
+Timeline.propTypes = {
+  children: PropTypes.instanceOf(Array)
 };
 
 export default Timeline;

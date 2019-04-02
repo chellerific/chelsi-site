@@ -25,10 +25,10 @@ class Tab extends React.Component {
     );
   }
 }
-Tab.PropTypes = {
-  activeTab: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+Tab.propTypes = {
+  activeTab: PropTypes.string,
+  label: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 export default Tab;

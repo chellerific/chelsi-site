@@ -1,0 +1,97 @@
+ul {
+  list-style: none;
+
+  li {
+    border-radius: 0 !important;
+  }
+}
+
+// nav {
+//     .options {
+//       @include vendor('display', 'flex');
+//       margin-bottom: 0;
+//       list-style: none;
+//       padding-left: 0;
+//       li {
+//         padding-left: 0;
+//         border-left: solid _size(border-width) _palette(border);
+//         border-left-color: #0b1a3d;
+//         &:first-child {
+//           border-left: 0;
+//         }
+
+//         a {
+//           display: block;
+//           min-width: 7.5rem;
+//           height: 2.75rem;
+//           line-height: 2.75rem;
+//           padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+//           text-transform: uppercase;
+//           letter-spacing: _font(letter-spacing);
+//           font-size: 1.1rem;
+//           border-bottom: 0;
+
+//           &:hover {
+//             background-color: _palette(border-bg);
+//             background-color: #e8c35f;
+//             color: #0b1a3d;
+//           }
+
+//           &:active {
+//             background-color: _palette(border-bg-alt);
+//           }
+//         }
+//       }
+//     }
+
+//     &.use-middle {
+//       &:after {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: calc(50% - #{_size(border-width) * 1});
+//         width: _size(border-width);
+//         height: 100%;
+//         background: _palette(border);
+//       }
+
+//       ul {
+//         li {
+//           &.is-middle {
+//             border-left: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .info-options {
+//     @include vendor('display', 'flex');
+//     padding-left: 0;
+//     text-decoration: none;
+//     list-style: none;
+
+//     li {
+//       display: inline;
+//       a {
+//         display: block;
+//         min-width: 7.5rem;
+//         height: 2.75rem;
+//         line-height: 2.75rem;
+//         padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
+//         text-transform: uppercase;
+//         letter-spacing: _font(letter-spacing);
+//         font-size: 0.8rem;
+//         border-bottom: 0;
+
+//         &:hover {
+//           background-color: _palette(border-bg);
+//         }
+
+//         &:active {
+//           background-color: _palette(border-bg-alt);
+//         }
+//       }
+//     }
+//   }

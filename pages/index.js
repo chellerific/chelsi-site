@@ -4,6 +4,7 @@ import stylesheet from 'styles/main.scss';
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 // import 'fullpage.js/vendors/scrolloverflow'; // Optional. When using scrollOverflow:true
 
@@ -18,15 +19,7 @@ class App extends React.Component {
       articleTimeout: false,
       article: '',
       loading: 'is-loading',
-      sectionsColor: [...originalColors],
-      fullpages: [
-        {
-          text: 'section 1'
-        },
-        {
-          text: 'section 2'
-        }
-      ]
+      sectionsColor: [...originalColors]
     };
     this.handleOpenArticle = this.handleOpenArticle.bind(this);
     this.handleCloseArticle = this.handleCloseArticle.bind(this);
@@ -84,45 +77,12 @@ class App extends React.Component {
 
   onLeave(origin, destination, direction) {
     console.log('onLeave', { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
-  }
-
-  changeTheme() {
-    const newColors = this.state.sectionsColor[0] === 'yellow' ? [...originalColors] : ['yellow', 'blue', 'white'];
-    this.setState({
-      sectionsColor: newColors
-    });
   }
 
   render() {
-    const { fullpages } = this.state;
-
-    if (!fullpages.length) {
-      return null;
-    }
-
-    const Menu = () => (
-      <div
-        className="menu"
-        style={{
-          position: 'fixed',
-          top: 0,
-          zIndex: 100
-        }}
-      >
-        <ul>
-          <li>
-            <button onClick={() => this.changeTheme()}>Change colors</button>
-          </li>
-        </ul>
-      </div>
-    );
-
     return (
       <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
-        <Menu />
-
+        {/* <Navbar /> */}
         <ReactFullpage
           navigation
           onLeave={this.onLeave.bind(this)}
@@ -130,9 +90,8 @@ class App extends React.Component {
           render={comp =>
             console.log('render prop change') || (
               <ReactFullpage.Wrapper>
-                {fullpages.map(({ text }) => (
-                  <div key={text} className="section">
-                    <h1>{text}</h1>
+                <div className="section">
+                  <div className="slide">
                     <Head>
                       <title>Chelsi Nolasco</title>
                       <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i" rel="stylesheet" />
@@ -154,11 +113,10 @@ class App extends React.Component {
 
                     <div id="bg" />
                   </div>
-                ))}
+                </div>
                 <div className="section">
-                  <div className="slide">hello slide 1</div>
-                  <div className="slide">hello slide 2</div>
-                  <div className="slide">hello slide 3</div>
+                  <div className="slide" />
+                  <div className="slide">slide 2 </div>
                 </div>
               </ReactFullpage.Wrapper>
             )
